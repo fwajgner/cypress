@@ -1,0 +1,14 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": ["cypress"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:cypress/recommended", "prettier"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "node": true,
+    "cypress/globals": true
+  }
+}
