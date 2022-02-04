@@ -6,34 +6,11 @@ context('Cypress.Commands', () => {
   // https://on.cypress.io/custom-commands
 
   it('.add() - create a custom command', () => {
-    // TODO: type
-    // Cypress.Commands.add('console', {
-    //   prevSubject: true,
-    // }, (subject, method) => {
-    //   // the previous subject is automatically received
-    //   // and the commands arguments are shifted
-
-    //   // allow us to change the console method used
-    //   method = method || 'log'
-
-    //   // log the subject to the console
-    //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //   // @ts-ignore TS7017
-    //   console[method]('The subject is', subject)
-
-    //   // whatever we return becomes the new subject
-    //   // we don't want to change the subject so
-    //   // we return whatever was passed in
-    //   return subject
-    // })
-
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore TS2339
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     cy.get('button')
-      .console('info')
+      .console('log')
       .then(($button) => {
         // subject is still $button
+        console.info($button, 'subject is still $button');
       });
   });
 });

@@ -23,3 +23,38 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+/**  * Custom command
+ * @example cy.console('log')
+ *  */
+Cypress.Commands.add(
+  'console',
+  {
+    prevSubject: true,
+  },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  (subject: any, method: string) => {
+    // the previous subject is automatically received
+    // and the commands arguments are shifted
+
+    // allow us to change the console method used
+    method = method || 'log';
+
+    // log the subject to the console
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-ignore
+    console[method]('The subject is', subject);
+
+    // whatever we return becomes the new subject
+    // we don't want to change the subject so
+    // we return whatever was passed in
+    return subject;
+  }
+);
+
+/**  * Custom command to select DOM element by data-cy attribute.
+ * @example cy.dataCy('greeting')
+ *  */
+Cypress.Commands.add('dataCy', (value: string) => {
+  return cy.get(`[data-cy=${value}]`);
+});
