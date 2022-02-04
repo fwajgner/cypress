@@ -6,5 +6,20 @@
   "eslint.nodePath": ".yarn/sdks",
   "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "cypressHelper.commandForOpen": "yarn cy",
+  "cypressHelper.commandForRun": "yarn cypress run",
+  "cypressHelper.menuItems": {
+    "OpenCypress": true,
+    "RunCypress": true,
+    "GenerateCustomCommandTypes": true,
+    "GoToCustomCommand": true,
+    "FindCustomCommandReferences": true,
+    "FindStepDefinitionReferences": true,
+    "SchemaGenerator": false,
+    "ParseHAR": false,
+    "mockAutocomplete": false
+  },
+  "cypressHelper.typeDefinitionFile": "cypress/global.d.ts",
+  "cypressHelper.includeAnnotationForCommands": true
 }
