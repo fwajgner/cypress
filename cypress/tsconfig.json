@@ -1,13 +1,25 @@
 {
   "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
     "lib": ["DOM", "ES5"],
     "target": "ES5",
     "strict": true,
+    "skipLibCheck": true,
+    "declaration": false,
     "allowJs": true,
     "checkJs": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["cypress", "node", "./support"]
+    "esModuleInterop": true,
+    "isolatedModules": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true,
+    "types": ["cypress", "node"]
   },
   "include": ["**/*.ts"]
 }
