@@ -10,3 +10,4 @@ Na dystrybucjach Linuxa trzeba uruchomić dodatkowo `chmod +x .husky/pre-commit`
 
 1. `yarn install --immutable`
 2. `yarn cy`
+3. 
